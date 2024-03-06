@@ -7,7 +7,8 @@ public class SalesRep extends StaffMember {
     // Constructor
 
     public SalesRep(){}
-    public SalesRep(String firstname, String lastname, String deptNumber, double hoursWorked, double allowance) {
+    public SalesRep(String firstname, String lastname, String deptNumber,
+                    double hoursWorked, double allowance) {
         super(firstname, lastname, deptNumber, hoursWorked);
         this.allowance = allowance;
     }
@@ -27,4 +28,7 @@ public class SalesRep extends StaffMember {
         super.display();
         System.out.println("Allowance: " + allowance);
     }
+
+    public void calculateSalary() {
     }
+}

@@ -46,6 +46,8 @@ public class Manager extends StaffMember {
         super.display();
         System.out.println("Bonus: " + bonus);
     }
-}
 
+    public void calculateSalary() {
+    }
+}
 
