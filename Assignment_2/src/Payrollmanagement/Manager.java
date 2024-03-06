@@ -21,7 +21,8 @@ public class Manager extends StaffMember {
 
     // Constructor
     public Manager (){};
-    public Manager(String firstname, String lastname, String deptNumber, double hoursWorked, double bonus) {
+    public Manager(String firstname, String lastname, String deptNumber,
+                   double hoursWorked, double bonus) {
         super(firstname, lastname, deptNumber, hoursWorked);
         this.bonus = bonus;
     }
@@ -46,8 +47,9 @@ public class Manager extends StaffMember {
         super.display();
         System.out.println("Bonus: " + bonus);
     }
-
-    public void calculateSalary() {
+    @Override
+    public double calculateSalary() {
+        return (getHoursWorked() * 2500) + bonus;
     }
 }
 

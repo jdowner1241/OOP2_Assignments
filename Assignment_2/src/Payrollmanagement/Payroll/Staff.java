@@ -28,6 +28,7 @@ abstract class Staff {
             this.allowance = allowance; }
         @Override
         public double calculateSalary() {
-            return (hoursWorked * 1500) + allowance;  }
+            return (hoursWorked * 1500) + allowance;
+        }
     }
 }

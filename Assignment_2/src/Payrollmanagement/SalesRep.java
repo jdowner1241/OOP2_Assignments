@@ -29,6 +29,8 @@ public class SalesRep extends StaffMember {
         System.out.println("Allowance: " + allowance);
     }
 
-    public void calculateSalary() {
+
+    public double calculateSalary() {
+        return (getHoursWorked() * 2500) + getAllowance();
     }
 }

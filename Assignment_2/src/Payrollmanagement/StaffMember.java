@@ -1,7 +1,7 @@
 package Payrollmanagement;
 
 // StaffMember class
-public class StaffMember {
+public abstract class StaffMember {
     private String firstname;
     private String lastname;
     private String deptNumber;
@@ -57,4 +57,6 @@ public class StaffMember {
         System.out.println("Hours Worked: " + hoursWorked);
 
     }
+
+    public abstract double calculateSalary();
 }
