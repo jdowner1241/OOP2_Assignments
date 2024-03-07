@@ -26,11 +26,12 @@ public class SalesRep extends StaffMember {
     @Override
     public void display() {
         super.display();
-        System.out.println("Allowance: " + allowance);
+        System.out.println("\tAllowance: $" + allowance);
+        System.out.println("\tSalary: $" + calculateSalary());
     }
 
 
     public double calculateSalary() {
-        return (getHoursWorked() * 2500) + getAllowance();
+        return (getHoursWorked() * 2500) + allowance;
     }
 }

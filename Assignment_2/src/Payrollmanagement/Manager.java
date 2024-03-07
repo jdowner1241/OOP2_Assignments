@@ -45,11 +45,10 @@ public class Manager extends StaffMember {
     @Override
     public void display() {
         super.display();
-        System.out.println("Bonus: " + bonus);
+        System.out.println("\tBonus: $" + bonus);
+        System.out.println("\tSalary: $" + calculateSalary());
     }
     @Override
-    public double calculateSalary() {
-        return (getHoursWorked() * 2500) + bonus;
-    }
+    public double calculateSalary() { return (getHoursWorked() * 2500) + bonus;}
 }
 
