@@ -8,6 +8,14 @@ public class Invoice implements Payable
     private int quantity;
     private double pricePerItem;
 
+    public Invoice() {
+    }
+
+    public Invoice(String partNumber, String partDescription, double pricePerItem) {
+        this.partNumber = partNumber;
+        this.partDescription = partDescription;
+        this.pricePerItem = pricePerItem;
+    }
 
     public String getPartNumber() {
         return partNumber;
@@ -45,5 +53,12 @@ public class Invoice implements Payable
     public double getPaymentAmount() {
 
         return quantity * pricePerItem;
+    }
+
+    public void display(){
+
+    }
+    public void displayName(){
+        System.out.println(" Item: " + partDescription + " Price: $" + pricePerItem);
     }
 }
