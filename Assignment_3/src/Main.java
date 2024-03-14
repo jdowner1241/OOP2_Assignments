@@ -22,9 +22,9 @@ public class Main {
         int iSelection;
         int tSelection;
 
-        System.out.println("\n\t++++++++++++++++++++++++");
+        System.out.println("\n\t++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
         System.out.println("\tPayroll Management System");
-        System.out.println("\t++++++++++++++++++++++++");
+        System.out.println("\t++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
 
         //Employee data
         Employee[] employees = new Employee[5];
@@ -75,6 +75,8 @@ public class Main {
                 System.out.println("\tCommission Employee was selected!!!");
                 System.out.println("\t______________________");
 
+
+
                 System.out.println("\n\tCommission Employee: ");
 
                 System.out.println("\n\t************************");
@@ -98,10 +100,21 @@ public class Main {
                 CommissionEmployee commission = new CommissionEmployee(item[iSelection].calItemCost(), 10);
                 BasePlusCommissionEmployee cBaseSalary = new BasePlusCommissionEmployee( commission.getGrossSales(), commission.getCommissionRate(), 30000);
 
+                item[iSelection].setContent();
+                item[iSelection].writeToFile();
+
                 System.out.println("\n\t************************");
                 System.out.println("\tCommission Payment information");
                 System.out.println("\t************************");
                 cBaseSalary.display();
+                System.out.println("\t************************");
+
+                cBaseSalary.setFirstName(employees[eSelection].getFirstName());
+                cBaseSalary.setLastName(employees[eSelection].getLastName());
+                cBaseSalary.setSocialSecurityNumber(employees[eSelection].getSocialSecurityNumber());
+                cBaseSalary.setContent();
+                cBaseSalary.adjustContent();
+                cBaseSalary.writeToFile();
 
                 break;
             case 2:
@@ -111,16 +124,23 @@ public class Main {
 
                 System.out.println("\n\tHourly Employee: ");
 
-                HourlyEmployee hEmployee = new HourlyEmployee();
-                //hourly pay standard is set to $500 per hour
-                hEmployee.setWage(500);
                 System.out.print("\tHow much hours was worked: ");
-                hEmployee.setHours(scanner.nextDouble());
+                double hours = scanner.nextDouble();
+                //hourly pay standard is set to $500 per hour
+                HourlyEmployee hEmployee = new HourlyEmployee(500, hours);
 
                 System.out.println("\n\t************************");
                 System.out.println("\tHourly Payment information");
                 System.out.println("\t************************");
                 hEmployee.display();
+                System.out.println("\t************************");
+
+                hEmployee.setFirstName(employees[eSelection].getFirstName());
+                hEmployee.setLastName(employees[eSelection].getLastName());
+                hEmployee.setSocialSecurityNumber(employees[eSelection].getSocialSecurityNumber());
+                hEmployee.setContent();
+                hEmployee.adjustContent();
+                hEmployee.writeToFile();
 
                 break;
             case 3:
@@ -129,16 +149,23 @@ public class Main {
                 System.out.println("\t______________________");
 
                 System.out.println("\n\tSalaried (weekly) Employee: ");
-
-                //Weekly pay is 15000
-                SalariedEmployee sEmployee = new SalariedEmployee(15000);
                 System.out.print("\tHow much weeks was worked: ");
-                sEmployee.setWeeksWorked(scanner.nextDouble());
+                double weeks = scanner.nextDouble();
+                //Weekly pay is 15000
+                SalariedEmployee sEmployee = new SalariedEmployee(15000, weeks);
 
                 System.out.println("\n\t************************");
                 System.out.println("\tSalaried Payment information");
                 System.out.println("\t************************");
                 sEmployee.display();
+                System.out.println("\t************************");
+
+                sEmployee.setFirstName(employees[eSelection].getFirstName());
+                sEmployee.setLastName(employees[eSelection].getLastName());
+                sEmployee.setSocialSecurityNumber(employees[eSelection].getSocialSecurityNumber());
+                sEmployee.setContent();
+                sEmployee.adjustContent();
+                sEmployee.writeToFile();
 
                 break;
             default:

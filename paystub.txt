@@ -1,0 +1,49 @@
+
+
+	************************************************************************
+	Employee Payment Info
+	************************
+	Name : Shemar Campbell
+	Social Security Number : SCM5555
+	Employee Payed on 16 March 2024
+	______________________
+	Employee Type : Hourly Employee
+
+	Hourly Payment information:
+	Hourly Wage : $500.0
+	Hours Worked : 20.0
+	Employee's Actual Pay : $10000.0
+	Employee Payment : $10000.0
+	____________________________________________________________________
+
+	************************************************************************
+	Employee Payment Info
+	************************
+	Name : Jamario Downer
+	Social Security Number : JAD1111
+	Employee Payed on 20 March 2024
+	______________________
+	Employee Type : Hourly Employee
+
+	Hourly Payment information:
+	Hourly Wage : $500.0
+	Hours Worked : 24.0
+	Employee's Actual Pay : $12000.0
+	Employee Payment : $12000.0
+	____________________________________________________________________
+
+	************************************************************************
+	Employee Payment Info
+	************************
+	Name : Shemar Campbell
+	Social Security Number : SCM5555
+	Employee Payed on 23 March 2024
+	______________________
+	Employee Type : Salaried Employee
+
+	Salaried Payment information: 
+	Weekly Salary :$15000.0
+	Weeks Worked : 45.0
+	Employee's Actual Pay:$675000.0
+	Employee Payment: $675000.0
+	____________________________________________________________________
