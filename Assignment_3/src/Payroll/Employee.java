@@ -6,7 +6,14 @@ public class Employee implements Payable{
     private String lastName;
     private String socialSecurityNumber;
 
+    public Employee() {
+    }
 
+    public Employee(String firstName, String lastName, String socialSecurityNumber) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.socialSecurityNumber = socialSecurityNumber;
+    }
 
     public String getFirstName() {
         return firstName;
@@ -35,5 +42,13 @@ public class Employee implements Payable{
     @Override
     public double getPaymentAmount() {
         return 0;
+    }
+
+    public void display(){
+
+    }
+
+    public void displayPayment(){
+
     }
 }
