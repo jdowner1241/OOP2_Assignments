@@ -5,7 +5,7 @@ public class Employee implements Payable{
     private String firstName;
     private String lastName;
     private String socialSecurityNumber;
-    private double _paymentAmount;
+    private double _PaymentAmount;
 
     public Employee() {
     }
@@ -42,7 +42,12 @@ public class Employee implements Payable{
 
     @Override
     public double getPaymentAmount() {
-        return _paymentAmount;
+        return _PaymentAmount;
+    }
+
+    @Override
+    public void writeToFile() {
+
     }
 
     public void displayName(){

@@ -20,4 +20,10 @@ public class HourlyEmployee extends Employee{
     public void setHours(double hours) {
         this.hours = hours;
     }
+
+    public void display(){
+        System.out.println("\tHourly Wage :$" + wage);
+        System.out.println("\tHours Worked : " + hours);
+        System.out.println("\n\tEmployee's Actual Pay:$" + (wage * hours));
+    }
 }

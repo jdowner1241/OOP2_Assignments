@@ -1,5 +1,8 @@
 package Payroll;
 
+import java.io.File;
+import java.io.IOException;
+
 public class Invoice implements Payable
 {
 
@@ -7,6 +10,8 @@ public class Invoice implements Payable
     private String partDescription;
     private int quantity;
     private double pricePerItem;
+
+    private double _PaymentAmount;
 
     public Invoice() {
     }
@@ -52,9 +57,31 @@ public class Invoice implements Payable
     @Override
     public double getPaymentAmount() {
 
-        return quantity * pricePerItem;
+        _PaymentAmount = quantity * pricePerItem;
+        return _PaymentAmount;
     }
 
+    @Override
+    public void writeToFile() {
+
+        try {
+            File receipt = new File("paystub.txt");
+
+            boolean isCreated = receipt.createNewFile();
+            if(isCreated){
+
+            }
+        }catch (IOException e){
+            System.out.println("Exception occurred trying to create file: ");
+            e.printStackTrace();
+        }
+
+    }
+
+    public double calItemCost() {
+
+        return quantity * pricePerItem;
+    }
     public void display(){
 
     }

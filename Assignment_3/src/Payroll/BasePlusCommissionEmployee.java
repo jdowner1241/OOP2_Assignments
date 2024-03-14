@@ -19,8 +19,10 @@ public class BasePlusCommissionEmployee extends CommissionEmployee {
         this.baseSalary = baseSalary;
     }
 
-    public double calSalary(){
-        ;
-        return baseSalary + (getGrossSales() * getCommissionRate());
+    public void display(){
+        System.out.println("\tGross rate :" + getCommissionRate() + "%");
+        System.out.println("\tGross Sale :$" + (getGrossSales() * getCommissionRate()));
+        System.out.println("\tBase pay :$" + baseSalary);
+        System.out.println("\n\tEmployee's Actual Pay:$" + (baseSalary +(getGrossSales() * (getCommissionRate() / 100))));
     }
 }

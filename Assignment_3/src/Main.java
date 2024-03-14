@@ -69,10 +69,13 @@ public class Main {
         tSelection = scanner.nextInt();
 
 
-
         switch (tSelection){
             case 1:
-                System.out.println("\tCommission Employee: ");
+                System.out.println("\n\t______________________");
+                System.out.println("\tCommission Employee was selected!!!");
+                System.out.println("\t______________________");
+
+                System.out.println("\n\tCommission Employee: ");
 
                 System.out.println("\n\t************************");
                 System.out.println("\tItem Selection");
@@ -90,20 +93,54 @@ public class Main {
                 System.out.println("\t" + item[iSelection].getPartDescription() + " was selected!!!");
                 System.out.println("\t______________________");
 
-                System.out.println("\tTotal item Cost :$" + item[iSelection].getPaymentAmount());
+                System.out.println("\tTotal item Cost :$" + item[iSelection].calItemCost());
 
-                CommissionEmployee commission = new CommissionEmployee(item[iSelection].getPaymentAmount(), 10);
+                CommissionEmployee commission = new CommissionEmployee(item[iSelection].calItemCost(), 10);
                 BasePlusCommissionEmployee cBaseSalary = new BasePlusCommissionEmployee( commission.getGrossSales(), commission.getCommissionRate(), 30000);
 
-                System.out.println("\n\tCommission Empoylee's :$" + cBaseSalary.getBaseSalary());
+                System.out.println("\n\t************************");
+                System.out.println("\tCommission Payment information");
+                System.out.println("\t************************");
+                cBaseSalary.display();
+
                 break;
             case 2:
-                System.out.println("\tHourly Employee: ");
+                System.out.println("\n\t______________________");
+                System.out.println("\tHourly Employee was selected!!!");
+                System.out.println("\t______________________");
+
+                System.out.println("\n\tHourly Employee: ");
+
+                HourlyEmployee hEmployee = new HourlyEmployee();
+                //hourly pay standard is set to $500 per hour
+                hEmployee.setWage(500);
+                System.out.print("\tHow much hours was worked: ");
+                hEmployee.setHours(scanner.nextDouble());
+
+                System.out.println("\n\t************************");
+                System.out.println("\tHourly Payment information");
+                System.out.println("\t************************");
+                hEmployee.display();
+
                 break;
             case 3:
-                System.out.println("\tSalaried (weekly) Employee: ");
-                break;
+                System.out.println("\n\t______________________");
+                System.out.println("\tSalaried Employee was selected!!!");
+                System.out.println("\t______________________");
 
+                System.out.println("\n\tSalaried (weekly) Employee: ");
+
+                //Weekly pay is 15000
+                SalariedEmployee sEmployee = new SalariedEmployee(15000);
+                System.out.print("\tHow much weeks was worked: ");
+                sEmployee.setWeeksWorked(scanner.nextDouble());
+
+                System.out.println("\n\t************************");
+                System.out.println("\tSalaried Payment information");
+                System.out.println("\t************************");
+                sEmployee.display();
+
+                break;
             default:
                 throw new IllegalStateException("Unexpected value: " + tSelection);
         }
