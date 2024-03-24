@@ -46,6 +46,11 @@ public class CurrencyConverter {
         this.tfJMDResults = tfJMDResults;
     }
 
+ /*   public void cbListing(){
+        String[] item = {"US","CAN", "Euro"};
+        cbCurrencyType = new JComboBox<>(item);
+    }*/
+
     private void createUIComponents() {
         // TODO: place custom component creation code here
 
