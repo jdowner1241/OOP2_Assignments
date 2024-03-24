@@ -10,11 +10,21 @@
 //Camoy Edwards       -   2201011768
 //Shemar Campbell     -   2201011901
 //Saphia Cothrel      –   2201013551
-hhhhhn
+
 //        */
+import OOP4_JamarioD.CurrencyConverter;
+
+import javax.swing.*;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+
+        CurrencyConverter start = new CurrencyConverter();
+        JFrame frame = new JFrame("Currency Converter");
+        frame.setContentPane(start.getMainForm());
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.pack();
+        frame.setVisible(true);
+
     }
 }
