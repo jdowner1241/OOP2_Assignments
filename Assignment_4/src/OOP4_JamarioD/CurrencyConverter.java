@@ -89,6 +89,14 @@ public class CurrencyConverter {
                 }
             }
         });
+        bClear.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                tfInput.setText("");
+                tfJMDResults.setText("");
+                cbCurrencyType.setSelectedIndex(0);
+            }
+        });
     }
 
     public JPanel getMainForm() {
